@@ -36,10 +36,6 @@ function render(item) {
     cardTitle.classList.add('card-title');
     cardTitle.textContent = item.title;
     div.appendChild(cardTitle);
-    let source = document.createElement('div');
-    source.classList.add('card-source');
-    source.contentTitle = `Источник: ${item.source.name}`;
-    div.appendChild(source);
     let p = document.createElement('p');
     p.classList.add('description');
     p.textContent = item.description;
