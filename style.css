@@ -131,7 +131,7 @@ body {
     .content {
         grid-template-columns: auto;
         max-width: none;
-        padding: 0 20px 0;
+        padding: 0 10px 0px ;
     }
 
     .myform {
@@ -144,6 +144,7 @@ body {
 
     .description {
         max-width: calc(100vw - 40px);
+        overflow: hidden;
     }
 
     .myform {
