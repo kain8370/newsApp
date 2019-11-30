@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: rgba(112, 105, 140, 0.7);
+    background-color: rgb(fff);
 }
 
 .form-select-country {
@@ -17,13 +17,12 @@ body {
 }
 
 .main {
-    background-color: #66d9ff;
     margin: 0 100px 0;
     width: calc(100% - 200);
 }
 
 .header {
-    background-image: linear-gradient(to bottom right, rgba(31, 174, 233, 1), #0b3161);
+    background-image: linear-gradient(to bottom, #f0f0f0, white);
     width: 100%;
     padding: 40px 0 30px;
 }
@@ -31,13 +30,13 @@ body {
 .header-title {
     font-size: 45px;
     margin: 0px 0 0px 30px;
-    color: white;
+    color: black;
 }
 
 .header-subtitle {
     font-size: 15px;
     margin: 0 0 20px 30px;
-    color: white;
+    color: #a1a1a1;
 }
 
 .form-container {
@@ -49,7 +48,7 @@ body {
     margin: auto;
     margin-top: 10px;
     box-shadow: 0px 0px 10px black;
-    background-color: #ccffff;
+    background-color: white;
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
@@ -79,8 +78,9 @@ body {
 
 .submit {
     width: 80px;
-    background-image: linear-gradient(to bottom, rgba(66, 170, 255, 0.7), rgba(255, 255, 255, 0.7));
+    background-image: linear-gradient(to bottom, silver, rgba(255, 255, 255, 0.7));
     box-shadow: 0 0 2px black;
+    border-radius: 5px;
 }
 
 .content {
@@ -93,21 +93,26 @@ body {
 .card {
     background-repeat: no-repeat;
     background-size: cover;
-    border: 1px solid gray;
+    box-shadow: 0 0 10px black;
     padding: 10px;
 }
 
 .card-title {
     font-size: 28px;
+    color: gray;
 }
 
-.card-date {
-    margin: 15px 0 15px;
+.description {
+    color: gray;
 }
 
 .card-image {
     max-width: 100%;
     margin: 15px 0 15px;
+}
+
+.card-link {
+    text-decoration: none;
 }
 
 @media screen and (max-width: 1060px) {
@@ -125,10 +130,27 @@ body {
 @media screen and (max-width: 610px) {
     .content {
         grid-template-columns: auto;
+        max-width: none;
+        padding: 0 20px 0;
     }
 
     .myform {
         min-width: 100px;
-        max-width: 90%;
+    }
+
+    .form-container {
+        max-width: calc(100vw - 40px);
+    }
+
+    .description {
+        max-width: calc(100vw - 40px);
+    }
+
+    .myform {
+        width: calc(100vw - 40px);
+    }
+
+    .form-container {
+        margin: 0 auto 10px;
     }
 }

@@ -25,6 +25,13 @@ function renderingCards(cards) {
 function render(item) {
     let div = document.createElement('div');
     div.classList.add("card");
+    let link = document.createElement('a');
+    link.classList.add('card-link');
+    link.href = item.url;
+    let img = document.createElement('img');
+    img.classList.add('card-image');
+    img.src = item.urlToImage;
+    div.appendChild(img);
     let cardTitle = document.createElement('h3');
     cardTitle.classList.add('card-title');
     cardTitle.textContent = item.title;
@@ -37,16 +44,8 @@ function render(item) {
     p.classList.add('description');
     p.textContent = item.description;
     div.appendChild(p);
-    let img = document.createElement('img');
-    img.classList.add('card-image');
-    img.src = item.urlToImage;
-    div.appendChild(img);
-    let link = document.createElement('a');
-    link.classList.add('card-link');
-    link.textContent = 'Ссылка на ресурс';
-    link.href = item.url;
-    div.appendChild(link);
-    return div;
+    link.appendChild(div);
+    return link;
 }
 
 const form  = document.querySelector('.myform');
